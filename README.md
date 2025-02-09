@@ -34,3 +34,20 @@ Collect & Label images (Healthy vs. Infected)
 Train a CNN model (TensorFlow/Keras or PyTorch)
 Convert model to OpenCV .pb (for TensorFlow) or .onnx (for PyTorch)
 Deploy on edge devices (Jetson Nano, Raspberry Pi) or integrate into drone cameras.
+
+4. Integration with Database
+
+A] Schema Design:
+- Tree_ID (Primary Key)
+- GPS_Location
+- Health_Status (Infected/Healthy)
+- Last_Inspection_Timestamp
+
+B] Data Collection & Ingestion:
+- IoT devices upload data using MQTT to a cloud server.
+- Image data processed using OpenCV for stress analysis.
+- Sensor data cross-verified for anomalies.
+
+C] Querying & Alerts:
+- If a tree is marked "Infected," an alert is triggered for treatment.
+- Plantation managers can view affected trees on a GIS-based dashboard
